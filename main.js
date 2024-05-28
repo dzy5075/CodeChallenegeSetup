@@ -1,9 +1,12 @@
 //Global currentCatTax variable
 let currentCatTax = 0;
+let calculateTax = document.getElementById("tax-calculate-btn");
+let amountOweP = document.getElementById("amountOwed");
+let payBtn = document.querySelector(".payBtn");
 
 // TODO: calcButtonClick function
 // Function should handle the following items:
-// 1) Generate a random, whole number between 0 and 20.
+// 1) Generate a random, whole number between 0 and 20. -complete-
 // 2) If the random number is not 0, update the amountOwed div to display "You owe {random number} cat tax! Pay up!"
 // 3) If the random number is not 0, update the pay button text to display "Pay Cat Tax"
 // 4) If the random number is not 0, update the pay button so that it is no longer hidden
@@ -11,8 +14,21 @@ let currentCatTax = 0;
 // 6) If the random number is 0, update the pay button so that it is hidden.
 // 7) Both the amountOwed and pay amount button should be updated every time the calculate cat tax button is clicked.
 
-function calcButtonClick() {}
-
+function calcButtonClick() {
+  currentCatTax = Math.floor(Math.random() * (20 + 1));
+  if (currentCatTax === 0) {
+    amountOweP.innerHTML = `You owe ${currentCatTax} cat tax! Pay Up`;
+    // amountOwed div to display "You owe {random number} cat tax! You've escaped this time!"
+    // pay button should be hidden
+  } else if (currentCatTax !== 0) {
+    amountOweP.innerHTML = `You owe ${currentCatTax} cat tax! Pay Up`;
+    // amount0wed div to display "You owe {random number} cat tax! Pay up" -completed-
+    payBtn.innerHTML = "Pay Cat Tax";
+    // pay button to display text "Pay Cat Tax" -completed-
+    
+    // pay button to display
+  }
+}
 // TODO: payButton function
 // Function should handle the following items:
 // 1) Decrement the currentCatTax amount by 1
