@@ -12,19 +12,22 @@
 
 <body>
     <div class="container">
-        <h1>Cat Tax Calculator</h1>
-        <p>Paying your cat taxes is a lot easier than paying your income taxes. Just click the button below to calculate
-            your tax.</p>
-        <!-- TODO: Call calcButtonClick function when this button is clicked "Done"-->
-        <!-- TODO: Style this button as a primary button with bootstrap "Done"-->
-        <button type="button" class="tax-calculate-btn btn-primary" onclick=calcButtonClick()>Calculate My Cat Tax</button>
-        <p id='amountOwed'></p>
-        <!-- TODO: Update button that lets you pay your cat tax "Done"-->
-        <button type="button" class="payBtn btn-success" style="display: none" onclick=payButton()></button>
-        <!-- TODO: Call payButton function when this button is clicked "Done"-->
-        <!-- TODO: Style this button as a success button with bootstrap "Done"-->
-        <!-- TODO: This button should not show unless a tax amount has been calculated "Done"-->
-        
+        <div class="subcontainer text-center">
+            <h1>Cat Tax Calculator</h1>
+            <p>Paying your cat taxes is a lot easier than paying your income taxes. Just click the button below to calculate
+                your tax.</p>
+            <!-- TODO: Call calcButtonClick function when this button is clicked "Done"-->
+            <!-- TODO: Style this button as a primary button with bootstrap "Done"-->
+            <div class="d-flex flex-column align-items-center" >
+                <button type="button" class="tax-calculate-btn btn-primary mb-3" style="width: 170px" onclick=calcButtonClick()>Calculate My Cat Tax</button>
+                <p id='amountOwed'></p>
+                <!-- TODO: Update button that lets you pay your cat tax "Done"-->
+                <button type="button" class="payBtn btn-success mb-3" style="display: none" onclick=payButton()></button>
+                <!-- TODO: Call payButton function when this button is clicked "Done"-->
+                <!-- TODO: Style this button as a success button with bootstrap "Done"-->
+                <!-- TODO: This button should not show unless a tax amount has been calculated "Done"-->
+            </div>
+        </div>
         <div class="imageContainer"></div>
     </div>
 </body>

@@ -24,7 +24,7 @@ function calcButtonClick() {
     payBtn.style.display = "none";
     // pay button should be hidden -completed-
   } else if (currentCatTax !== 0) {
-    amountOweP.innerHTML = `You owe ${currentCatTax} cat tax! Pay Up`;
+    amountOweP.innerHTML = `You owe ${currentCatTax} cat tax! Pay Up!`;
     // amount0wed div to display "You owe {random number} cat tax! Pay up" -completed-
     payBtn.innerHTML = "Pay Cat Tax";
     // pay button to display text "Pay Cat Tax" -completed-
@@ -44,7 +44,7 @@ function calcButtonClick() {
 function payButton() {
   //  #1 Decrement currentCatTax
   currentCatTax = currentCatTax - 1;
-  amountOweP.innerHTML = `You owe ${currentCatTax} cat tax! Pay Up`;
+  amountOweP.innerHTML = `You owe ${currentCatTax} cat tax! Pay Up!`;
 
   if (currentCatTax > 0) {
     // #2 display you still owe tax to amount0wed if cat tax greater than 0
@@ -64,12 +64,17 @@ function payButton() {
   if (currentCatTax < 0) {
     let finalImageURL =
       "https://media.tenor.com/QMQmyssO0UMAAAAM/cat-wiggle.gif";
-    mainContainer.innerHTML = `<img src="${finalImageURL}">`;
+    mainContainer.innerHTML = `<img src="${finalImageURL}" style="width:50rem">`;
   }
 }
 // #5 display Cat image from Url and append to image container
 function displayCat(cat) {
   const img = document.createElement("img");
-  imageContainer.appendChild(img);
+  // prepend image for newest image to display on top 
+  imageContainer.prepend(img);
   img.src = cat[0].url;
+  img.style.width = "250px";
+  img.style.height = "170px";
+  img.style.marginLeft = "10px";
+  img.style.marginBottom = "10px";
 }
