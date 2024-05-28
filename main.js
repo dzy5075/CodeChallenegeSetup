@@ -62,9 +62,9 @@ function payButton() {
   }
   // # 6 if Cat tax is less than or equal 0 when clicked, replace content and display final cat GIF
   if (currentCatTax < 0) {
-        let finalImageURL = "https://media.tenor.com/QMQmyssO0UMAAAAM/cat-wiggle.gif"
-        mainContainer.innerHTML = `<img src="${finalImageURL}">`;
-        
+    let finalImageURL =
+      "https://media.tenor.com/QMQmyssO0UMAAAAM/cat-wiggle.gif";
+    mainContainer.innerHTML = `<img src="${finalImageURL}">`;
   }
 }
 // #5 display Cat image from Url and append to image container
